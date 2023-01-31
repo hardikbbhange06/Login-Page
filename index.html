@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bo {
+            height: 300px;
+            width: 200px;
+            border: 2px solid;
+            border-radius: 5%;
+            margin: 0 auto;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bo">
+        <h1>Login</h1>
+
+        <div> Username:- <input type="email" name="Username" id="int1" onfocus="getfocus()"> </div>
+        <br>
+        <div> Password:- <input type="password" name="Password" id=""> </div>
+        <br>
+        
+            <input type="submit" value="Login" onclick="login()">
+            
+      
+
+    </div>
+    <script>
+        function login(){
+            let Time=new Date().getHours();
+            if (Time<12) {
+                alert("Good Morning");
+           
+            }
+            else if (Time>=12&&Time<18) {
+                alert("Good Afternoon");
+             
+            }
+            else if (Time>=18&&Time<19.30) {
+                alert("Good Evening");
+            }
+        }
+
+        function getfocus() {
+            let ele = document.getElementById("int1")
+            ele.style.backgroundColor = "yellow"
+        }
+    </script>
+</body>
+
+</html>
